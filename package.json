@@ -1,0 +1,15 @@
+{
+  "name": "servico-de-pagamento",
+  "version": "1.0.0",
+  "description": "Serviço de pagamento com armazenamento de histórico",
+  "main": "src/ServicoDePagamento.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": ["pagamento", "javascript"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^10.2.0"
+  }
+}
