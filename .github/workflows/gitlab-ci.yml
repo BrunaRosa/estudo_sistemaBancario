@@ -1,4 +1,4 @@
-name: CI
+name: GitLab CI Workflow
 
 on:
   push:
