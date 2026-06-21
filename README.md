@@ -22,6 +22,32 @@ Execute os testes com:
 npm test
 ```
 
+Gerar um relatório de testes localmente:
+
+```bash
+npm run test:report
+```
+
+## Integração Contínua (CI)
+
+Este projeto inclui uma pipeline GitHub Actions configurada em `.github/workflows/ci.yml`.
+
+A pipeline contempla:
+
+- `push` para os branches `main` e `master`
+- execução manual via `workflow_dispatch`
+- execução agendada diária (`cron`)
+- geração de relatório de testes em `test-results/`
+- upload do relatório como artefato da pipeline
+
+### Como funciona
+
+1. `actions/checkout@v4` baixa o repositório.
+2. `actions/setup-node@v4` configura o ambiente Node.js.
+3. `npm ci` instala dependências com base em `package-lock.json`.
+4. `npm run test:report` executa os testes usando o `mochawesome`.
+5. `actions/upload-artifact@v4` publica os resultados de `test-results/` como artefato.
+
 ## Uso
 
 ```javascript
