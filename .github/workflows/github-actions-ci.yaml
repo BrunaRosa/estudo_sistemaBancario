@@ -6,11 +6,15 @@ permissions:
 on:
   push:
     branches:
-      - main
-      - master
-  workflow_dispatch: {}
+      - 'main'
+      - 'master'
+  pull_request:
+    branches:
+      - 'main'
+      - 'master'
+  workflow_dispatch:
   schedule:
-    - cron: '30 01 * * *'
+    - cron: '35 01 * * *'
 
 jobs:
   test:
