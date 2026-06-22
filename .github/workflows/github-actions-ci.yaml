@@ -14,7 +14,7 @@ on:
       - 'master'
   workflow_dispatch:
   schedule:
-    - cron: '35 01 * * *'
+    - cron: '50 01 * * *'
 
 jobs:
   test:
