@@ -7,7 +7,7 @@ on:
       - master
   workflow_dispatch: {}
   schedule:
-    - cron: '30 00 * * *'
+    - cron: '35 00 * * *'
 
 jobs:
   test:
